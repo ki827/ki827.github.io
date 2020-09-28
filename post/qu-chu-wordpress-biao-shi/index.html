@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>You can do it!</title>
+<title>去除WordPress标识 | You can do it!</title>
 <meta name="description" content="我思故我在">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,6 +23,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://qinrongjun.github.io">You can do it!</a></h3>
@@ -76,65 +77,54 @@
   </div>
 </nav>
 
-
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
+          <article class="article">
+            <h1>去除WordPress标识</h1>
+            <p class="article-meta">
+              2020-09-28
+              
+            </p>
+            
+            <div class="post-content">
+              <h2 id="去除图标">去除图标</h2>
+<pre><code class="language-php">function annointed_admin_bar_remove() {
+    global $wp_admin_bar;
+    $wp_admin_bar-&gt;remove_menu('wp-logo');
+}
+add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
+
+</code></pre>
+<h2 id="去除文字">去除文字</h2>
+<pre><code class="language-php">
+add_filter('admin_title', 'wpdx_custom_admin_title', 10, 2);
+    function wpdx_custom_admin_title($admin_title, $title){
+    return $title.' &amp;lsaquo; '.get_bloginfo('name');
+}
+
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
           
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qinrongjun.github.io/post/qu-chu-wordpress-biao-shi/">去除WordPress标识</a>
-    </h2>
-    <p class="article-meta">
-      2020-09-28
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qinrongjun.github.io/post/qu-chu-wordpress-biao-shi/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qinrongjun.github.io/post/redis_pipeline/">Redis 学习笔记一：管道技术</a>
-    </h2>
-    <p class="article-meta">
-      2020-06-13
-      
-        <a href="https://qinrongjun.github.io/tag/redis/" class="badge secondary">
-          redis
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qinrongjun.github.io/post/redis_pipeline/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qinrongjun.github.io/post/redis_pipeline/">
+                <h3 class="post-title">
+                  Redis 学习笔记一：管道技术
+                </h3>
+              </a>
+            </div>
+          
         </div>
         
-        <div class="row flex-edges">
-  
-  
-</div>
-
       </div>
-      
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://qinrongjun.github.io/images/avatar.png?v=1601283043726" class="no-responsive avatar">
@@ -181,7 +171,7 @@
     </div>
     <div class="row">
       
-        <a href="https://qinrongjun.github.io/tag/redis/" class="badge secondary">
+        <a href="https://qinrongjun.github.io/tag/redis/" class="badge ">
           redis
         </a>
       
@@ -192,7 +182,9 @@
   </div>
 </div>
 
+
     </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
