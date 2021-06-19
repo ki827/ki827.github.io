@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qinrongjun.github.io</id>
     <title>You can do it!</title>
-    <updated>2020-09-28T08:52:46.151Z</updated>
+    <updated>2021-06-19T02:39:01.051Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qinrongjun.github.io"/>
     <link rel="self" href="https://qinrongjun.github.io/atom.xml"/>
     <subtitle>我思故我在</subtitle>
     <logo>https://qinrongjun.github.io/images/avatar.png</logo>
     <icon>https://qinrongjun.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, You can do it!</rights>
+    <rights>All rights reserved 2021, You can do it!</rights>
     <entry>
         <title type="html"><![CDATA[去除WordPress标识]]></title>
         <id>https://qinrongjun.github.io/post/qu-chu-wordpress-biao-shi/</id>
@@ -26,26 +26,13 @@ add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
 </code></pre>
 <h2 id="去除文字">去除文字</h2>
 <pre><code class="language-php">
-add_filter('admin_title', 'wpdx_custom_admin_title', 10, 2);
-    function wpdx_custom_admin_title($admin_title, $title){
-    return $title.' &amp;lsaquo; '.get_bloginfo('name');
+function footerText () {
+	return '';
 }
+add_filter('admin_footer_text', 'footerText', 9999);
+
 
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Redis 学习笔记一：管道技术]]></title>
-        <id>https://qinrongjun.github.io/post/redis_pipeline/</id>
-        <link href="https://qinrongjun.github.io/post/redis_pipeline/">
-        </link>
-        <updated>2020-06-13T06:30:34.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<!-- more -->
-<h2 id="管道是什么">管道是什么？</h2>
-<h2 id="为什么需要管道">为什么需要管道？</h2>
-<h2 id="管道的工作原理">管道的工作原理？</h2>
-<h2 id="在spring-boot中使用redis管道技术">在Spring Boot中使用Redis管道技术</h2>
 ]]></content>
     </entry>
 </feed>
