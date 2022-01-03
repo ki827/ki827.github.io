@@ -1,0 +1,21 @@
+menu:
+  Home: /
+  Categories: /categories/
+  Tags: /tags
+  Archives: /archives/
+
+social:
+  email:
+  stack-overflow:
+  twitter:
+  facebook:
+  github:
+  weibo:
+  zhihu:
+per_page: 5
+copyright:
+  enable: false
+toc: true
+latex: true
+rss: false
+since: 2022
