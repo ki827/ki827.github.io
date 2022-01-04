@@ -1,5 +1,5 @@
 ---
-title: redis应用场景
+title: Redis应用场景
 date: 2022-01-03 23:37:12
 tags: redis
 categories: 数据库
